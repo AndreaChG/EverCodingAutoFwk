@@ -29,7 +29,6 @@ public class LoginPage extends BasePage{
     }
 
     public void authentication(String srtUserName, String strUserPassword) {
-    	System.out.println("Page Title:"+ driver.getTitle());
     	this.fillUserName(srtUserName);
         this.fillUserPassword(strUserPassword);
         this.clickSignIn();

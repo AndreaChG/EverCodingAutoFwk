@@ -17,6 +17,7 @@ public class EmployeesPage extends BasePage{
 	    private By startWorkingMonthList = By.id("employee_start_working_on_2i");
 	    private By startWorkingDayList = By.id("employee_start_working_on_3i");
 	    private By createEmployeeButton = By.cssSelector("input[value='Create Employee']");
+	    private By employeeCreationMsg = By.id("notice");
 
 	    public EmployeesPage(WebDriver driver) {
 	        super(driver);
@@ -30,6 +31,27 @@ public class EmployeesPage extends BasePage{
 	    
 	    public void goToCreateEmployee(){
 	    	driver.findElement(createNewEmployeeLink).click();
+	    }
+	    
+	    public void createEmployee(String strFirstName, String strLastName, String strEmail, String strIdentification, String strLeaderName, String strStartWorkingYear, String strStartWorkingMonth, String strStartWorkingDay){
+	    	System.out.println("Fill new employee information...");
+	    	this.fillFirstNameField(strFirstName);
+	    	this.fillLastNameField(strLastName);
+	    	this.fillEmailField(strEmail);
+	    	this.fillIdentificationField(strIdentification);
+	    	this.fillLeaderNameField(strLeaderName);
+	    	this.selectStartWorkingYear(strStartWorkingYear);
+	    	this.selectStartWorkingMonth(strStartWorkingMonth);
+	    	this.selectStartWorkingDay(strStartWorkingDay);
+	    }
+	    
+	    public void clickOnCreateEmployee(){
+	    	System.out.println("Proceed to create new employee");
+	    	driver.findElement(createEmployeeButton).click();
+	    }
+	    
+	    public String getEmployeeCreationMsg(){
+	    	return driver.findElement(employeeCreationMsg).getText();
 	    }
 	    
 	    private void fillFirstNameField(String strFirstName){
@@ -63,6 +85,5 @@ public class EmployeesPage extends BasePage{
 	    private void selectStartWorkingDay(String strStartWorkingDay){
 	    	driver.findElement(startWorkingDayList).sendKeys(strStartWorkingDay);
 	    }
-	    
 	         
 }
