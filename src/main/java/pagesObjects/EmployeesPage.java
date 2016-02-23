@@ -72,7 +72,7 @@ public class EmployeesPage extends BasePage{
 	    	try{
 	    		driver.findElement(By.xpath(".//td[contains(text(),'"+ strFirstName +"')]"));
 	    		elementExists = true;
-	    	} catch(NoSuchElementException e){
+	    	} catch(Exception e){
 	    		elementExists = false;
 	    	}
 			return elementExists;

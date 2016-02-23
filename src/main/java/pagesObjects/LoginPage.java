@@ -8,9 +8,20 @@ public class LoginPage extends BasePage{
 	private By signInButton = By.cssSelector(".submit");
     private By userName = By.id("user_email");
     private By userPassword = By.id("user_password");
+    private By publicSiteLink = By.xpath(".//*[@id='content']/p/a[contains(text(),'public site')]");
 
     public LoginPage(WebDriver driver) {
         super(driver);
+    }
+    
+    public void authentication(String srtUserName, String strUserPassword) {
+    	this.fillUserName(srtUserName);
+        this.fillUserPassword(strUserPassword);
+        this.clickSignIn();
+    }
+    
+    public void goToPublicSite(){
+    	driver.findElement(publicSiteLink);
     }
 
     //Setting the user name
@@ -28,9 +39,4 @@ public class LoginPage extends BasePage{
         driver.findElement(signInButton).click();
     }
 
-    public void authentication(String srtUserName, String strUserPassword) {
-    	this.fillUserName(srtUserName);
-        this.fillUserPassword(strUserPassword);
-        this.clickSignIn();
-    }
 }
