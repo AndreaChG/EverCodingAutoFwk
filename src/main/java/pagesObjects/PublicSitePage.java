@@ -17,7 +17,8 @@ public class PublicSitePage extends BasePage{
 		return driver.findElement(publicSiteMessage).getText();
 	}
 	
-	public void findByEmployeeIdentification(String strEmployeeIdentification){
+	public void findEmployee(String strEmployeeIdentification){
+		System.out.println("Proceed to find an employee by Id...");
 		this.fillEmployeeIdField(strEmployeeIdentification);
 		this.clickOnFindEmployeeButton();
 	}

@@ -21,7 +21,7 @@ public class LoginPage extends BasePage{
     }
     
     public void goToPublicSite(){
-    	driver.findElement(publicSiteLink);
+    	driver.findElement(publicSiteLink).click();
     }
 
     //Setting the user name

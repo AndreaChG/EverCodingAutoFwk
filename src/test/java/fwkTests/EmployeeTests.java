@@ -37,13 +37,20 @@ public class EmployeeTests extends BaseSetUpTest {
 	 public void indentifiyingEmployee(){
 		 employeePage.clickOnLogOut();
 		 loginPage.goToPublicSite();
-		 Assert.assertEquals(publicSitePage.getSiteTitle(), "Hi GAP employee!");
+		 publicSitePage.findEmployee("1234567890");
+		 Assert.assertEquals(publicSitePage.getSiteTitle(), "Hi James Smith,");
+		 publicSitePage.clickOnLogoLink();
 	 }
 	 
 	 @Test 
 	 public void deleteEmployee(){
+		 loginPage.authentication("gap-automation-test@mailinator.com","12345678");
 		 employeePage.deleteEmployee("James");
 		 Assert.assertEquals(employeePage.getIfEmployeeNameExists("James"), false);
+		 employeePage.clickOnLogOut();
+		 loginPage.goToPublicSite();
+		 publicSitePage.findEmployee("1234567890");
+		 Assert.assertEquals(publicSitePage.getSiteTitle(), "No Employee found with that identification"); 
 	 }
 	 
 	 

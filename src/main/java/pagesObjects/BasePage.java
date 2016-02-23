@@ -14,10 +14,12 @@ public class BasePage {
 	}
 	
 	public void clickOnLogOut(){
+		System.out.println("Login out from system...");
 		driver.findElement(logOutButton);
 	}
 	
 	public void clickOnLogoLink(){
+		System.out.println("Returning to home page");
 		driver.findElement(logoLink);
 	}
 

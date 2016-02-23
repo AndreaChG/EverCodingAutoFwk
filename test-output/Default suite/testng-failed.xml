@@ -3,7 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="fwkTests.EmployeeTests"/>
+      <class name="fwkTests.EmployeeTests">
+        <methods>
+          <include name="deleteEmployee"/>
+        </methods>
+      </class> <!-- fwkTests.EmployeeTests -->
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
@@ -11,7 +15,6 @@
       <class name="fwkTests.EmployeeTests">
         <methods>
           <include name="deleteEmployee"/>
-          <include name="createNewEmployee"/>
         </methods>
       </class> <!-- fwkTests.EmployeeTests -->
     </classes>

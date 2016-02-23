@@ -28,7 +28,7 @@ public class EmployeesPage extends BasePage{
 	    }
 
 	    public String getSignInMessage(){
-	    	System.out.println("Page Title:"+ driver.getTitle());
+	    	System.out.println("User is authenticated");
 	        WebElement validationMsg = driver.findElement(loginValidationMsg);
 	        return validationMsg.getText();
 	    }
