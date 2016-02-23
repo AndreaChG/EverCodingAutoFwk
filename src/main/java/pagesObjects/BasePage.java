@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class BasePage {
 	
 	protected WebDriver driver;
-	private By logOutButton = By.cssSelector("#user_information a");
-	private By logoLink = By.cssSelector("logo_text a img");
+	private By logOutButton = By.cssSelector("#user_information span a");
+	private By logoLink = By.cssSelector("#logo_text a img");
 	
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -15,12 +15,12 @@ public class BasePage {
 	
 	public void clickOnLogOut(){
 		System.out.println("Login out from system...");
-		driver.findElement(logOutButton);
+		driver.findElement(logOutButton).click();;
 	}
 	
 	public void clickOnLogoLink(){
 		System.out.println("Returning to home page");
-		driver.findElement(logoLink);
+		driver.findElement(logoLink).click();;
 	}
 
 }

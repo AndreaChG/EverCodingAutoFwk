@@ -6,34 +6,18 @@
   <test name="Login Test">
     <parameter name="appURL" value="http://vacations.evercoding.com/"/>
     <classes>
-      <class name="fwkTests.LoginTest"/>
-    </classes>
-  </test> <!-- Login Test -->
-  <test name="Employee Tests">
-    <parameter name="appURL" value="http://vacations.evercoding.com/"/>
-    <classes>
-      <class name="fwkTests.EmployeeTests"/>
-    </classes>
-  </test> <!-- Employee Tests -->
-  <test name="Employee Tests(failed)" parallel="classes">
-    <parameter name="appURL" value="http://vacations.evercoding.com/"/>
-    <classes>
-      <class name="fwkTests.EmployeeTests">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="deleteEmployee"/>
-          <include name="initializeTestBaseSetup"/>
-          <include name="indentifiyingEmployee"/>
-        </methods>
-      </class> <!-- fwkTests.EmployeeTests -->
       <class name="fwkTests.LoginTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="initializeTestBaseSetup"/>
+          <include name="testSignInUser"/>
         </methods>
       </class> <!-- fwkTests.LoginTest -->
+      <class name="fwkTests.EmployeeTests">
+        <methods>
+          <include name="createNewEmployee"/>
+          <include name="identifiyingEmployee"/>
+          <include name="deleteEmployee"/>
+        </methods>
+      </class> <!-- fwkTests.EmployeeTests -->
     </classes>
-  </test> <!-- Employee Tests(failed) -->
+  </test> <!-- Login Test -->
 </suite> <!-- Failed suite [Evercoding Vacations] -->

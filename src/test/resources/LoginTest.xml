@@ -6,13 +6,18 @@
     <test name="Login Test">
         <parameter name="appURL" value="http://vacations.evercoding.com/"/>
         <classes>
-            <class name="fwkTests.LoginTest"/>
-        </classes>
-    </test>
-    <test name="Employee Tests">
-    	<parameter name="appURL" value="http://vacations.evercoding.com/"/>
-    	<classes>
-    		 <class name="fwkTests.EmployeeTests"/>
+            <class name="fwkTests.LoginTest">
+            	<methods>
+	    		 	<include name="testSignInUser"></include>
+	    		 </methods>
+            </class>
+            <class name="fwkTests.EmployeeTests">
+	    		 <methods>
+	    		 	<include name="createNewEmployee"></include>
+	    		 	<include name="identifiyingEmployee"></include>
+	    		 	<include name="deleteEmployee"></include>
+	    		 </methods>
+    		 </class>
     	</classes>
     </test>
 </suite>

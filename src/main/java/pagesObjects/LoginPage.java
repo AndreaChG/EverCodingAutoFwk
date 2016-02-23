@@ -8,7 +8,7 @@ public class LoginPage extends BasePage{
 	private By signInButton = By.cssSelector(".submit");
     private By userName = By.id("user_email");
     private By userPassword = By.id("user_password");
-    private By publicSiteLink = By.xpath(".//*[@id='content']/p/a[contains(text(),'public site')]");
+    private By publicSiteLink = By.xpath(".//*[@id='content']/p/a");
 
     public LoginPage(WebDriver driver) {
         super(driver);

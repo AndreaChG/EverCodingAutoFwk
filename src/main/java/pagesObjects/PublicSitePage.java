@@ -24,7 +24,7 @@ public class PublicSitePage extends BasePage{
 	}
 
 	private void clickOnFindEmployeeButton() {
-		driver.findElement(findEmployeeButton);
+		driver.findElement(findEmployeeButton).click();
 		
 	}
 

@@ -31,11 +31,11 @@ public class EmployeeTests extends BaseSetUpTest {
 		 Assert.assertEquals(employeePage.getEmployeeCreationMsg(),"Employee was successfully created.");
 		 employeePage.backToEmployeeInformation();
 		 Assert.assertEquals(employeePage.getIfEmployeeNameExists("James"), true);
+		 employeePage.clickOnLogOut();
 	 }
 	 
 	 @Test
-	 public void indentifiyingEmployee(){
-		 employeePage.clickOnLogOut();
+	 public void identifiyingEmployee(){
 		 loginPage.goToPublicSite();
 		 publicSitePage.findEmployee("1234567890");
 		 Assert.assertEquals(publicSitePage.getSiteTitle(), "Hi James Smith,");
@@ -51,8 +51,6 @@ public class EmployeeTests extends BaseSetUpTest {
 		 loginPage.goToPublicSite();
 		 publicSitePage.findEmployee("1234567890");
 		 Assert.assertEquals(publicSitePage.getSiteTitle(), "No Employee found with that identification"); 
-	 }
-	 
-	 
+	 }	 
 
 }

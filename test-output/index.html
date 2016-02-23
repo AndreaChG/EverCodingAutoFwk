@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Evercoding_Vacations">
-              <span class="suite-name border-failed">Evercoding Vacations</span>
+              <span class="suite-name border-passed">Evercoding Vacations</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Evercoding_Vacations">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Evercoding_Vacations" class="hide-methods failed suite-Evercoding_Vacations"> (hide)</a> <!-- hide-methods failed suite-Evercoding_Vacations -->
-                      <a href="#" panel-name="suite-Evercoding_Vacations" class="show-methods failed suite-Evercoding_Vacations"> (show)</a> <!-- show-methods failed suite-Evercoding_Vacations -->
-                    </span>
-                    <div class="method-list-content failed suite-Evercoding_Vacations">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Evercoding_Vacations" title="fwkTests.EmployeeTests" hash-for-method="deleteEmployee">deleteEmployee</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Evercoding_Vacations" title="fwkTests.EmployeeTests" hash-for-method="indentifiyingEmployee">indentifiyingEmployee</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Evercoding_Vacations -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,6 +103,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Evercoding_Vacations" title="fwkTests.EmployeeTests" hash-for-method="createNewEmployee">createNewEmployee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Evercoding_Vacations" title="fwkTests.EmployeeTests" hash-for-method="deleteEmployee">deleteEmployee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Evercoding_Vacations" title="fwkTests.EmployeeTests" hash-for-method="identifiyingEmployee">identifiyingEmployee</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -141,95 +132,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Evercoding_Vacations" class="panel Evercoding_Vacations">
-          <div class="suite-Evercoding_Vacations-class-failed">
+          <div class="suite-Evercoding_Vacations-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">fwkTests.EmployeeTests</span>
+              <img src="passed.png"/>
+              <span class="class-name">fwkTests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteEmployee">
-                  </a> <!-- deleteEmployee -->
-                  <span class="method-name">deleteEmployee</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;user_email&quot;}
-Command duration or timeout: 8 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;pe-achang&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
-*** Element info: {Using=id, value=user_email}
-Session ID: 684d0225-8d53-462b-a6bb-abbdbe409c36
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=44.0.2}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at pagesObjects.LoginPage.fillUserName(LoginPage.java:29)
-	at pagesObjects.LoginPage.authentication(LoginPage.java:18)
-	at fwkTests.EmployeeTests.deleteEmployee(EmployeeTests.java:47)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;user_email&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;pe-achang&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="indentifiyingEmployee">
-                  </a> <!-- indentifiyingEmployee -->
-                  <span class="method-name">indentifiyingEmployee</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;content&apos;]/p/a[contains(text(),&apos;public site&apos;)]&quot;}
-Command duration or timeout: 50 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;pe-achang&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
-*** Element info: {Using=xpath, value=.//*[@id=&apos;content&apos;]/p/a[contains(text(),&apos;public site&apos;)]}
-Session ID: 684d0225-8d53-462b-a6bb-abbdbe409c36
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=44.0.2}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at pagesObjects.LoginPage.goToPublicSite(LoginPage.java:24)
-	at fwkTests.EmployeeTests.indentifiyingEmployee(EmployeeTests.java:39)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;content&apos;]/p/a[contains(text(),&apos;public site&apos;)]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;pe-achang&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/ANDREA~1.CHA/AppData/Local/Temp/anonymous8656164877317612427webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
+                  <a name="testSignInUser">
+                  </a> <!-- testSignInUser -->
+                  <span class="method-name">testSignInUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Evercoding_Vacations-class-failed -->
+          </div> <!-- suite-Evercoding_Vacations-class-passed -->
           <div class="suite-Evercoding_Vacations-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -243,19 +160,18 @@ Driver info: driver.version: unknown
                   <span class="method-name">createNewEmployee</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Evercoding_Vacations-class-passed -->
-          <div class="suite-Evercoding_Vacations-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">fwkTests.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSignInUser">
-                  </a> <!-- testSignInUser -->
-                  <span class="method-name">testSignInUser</span>
+                  <a name="deleteEmployee">
+                  </a> <!-- deleteEmployee -->
+                  <span class="method-name">deleteEmployee</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="identifiyingEmployee">
+                  </a> <!-- identifiyingEmployee -->
+                  <span class="method-name">identifiyingEmployee</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -274,36 +190,20 @@ Driver info: driver.version: unknown
   &lt;test name=&quot;Login Test&quot;&gt;
     &lt;parameter name=&quot;appURL&quot; value=&quot;http://vacations.evercoding.com/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;fwkTests.LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login Test --&gt;
-  &lt;test name=&quot;Employee Tests&quot;&gt;
-    &lt;parameter name=&quot;appURL&quot; value=&quot;http://vacations.evercoding.com/&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;fwkTests.EmployeeTests&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Employee Tests --&gt;
-  &lt;test name=&quot;Employee Tests(failed)&quot; parallel=&quot;classes&quot;&gt;
-    &lt;parameter name=&quot;appURL&quot; value=&quot;http://vacations.evercoding.com/&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;fwkTests.EmployeeTests&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;tearDown&quot;/&gt;
-          &lt;include name=&quot;setUp&quot;/&gt;
-          &lt;include name=&quot;deleteEmployee&quot;/&gt;
-          &lt;include name=&quot;initializeTestBaseSetup&quot;/&gt;
-          &lt;include name=&quot;indentifiyingEmployee&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- fwkTests.EmployeeTests --&gt;
       &lt;class name=&quot;fwkTests.LoginTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;tearDown&quot;/&gt;
-          &lt;include name=&quot;setUp&quot;/&gt;
-          &lt;include name=&quot;initializeTestBaseSetup&quot;/&gt;
+          &lt;include name=&quot;testSignInUser&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- fwkTests.LoginTest --&gt;
+      &lt;class name=&quot;fwkTests.EmployeeTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;createNewEmployee&quot;/&gt;
+          &lt;include name=&quot;identifiyingEmployee&quot;/&gt;
+          &lt;include name=&quot;deleteEmployee&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- fwkTests.EmployeeTests --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Employee Tests(failed) --&gt;
+  &lt;/test&gt; &lt;!-- Login Test --&gt;
 &lt;/suite&gt; &lt;!-- Evercoding Vacations --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -315,13 +215,7 @@ Driver info: driver.version: unknown
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Employee Tests (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Employee Tests(failed) (2 classes)</span>
+                <span class="test-name">Login Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -349,26 +243,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'indentifiyingEmployee')
+data.setCell(0, 1, 'createNewEmployee')
 data.setCell(0, 2, 'fwkTests.EmployeeTests')
-data.setCell(0, 3, 55380);
+data.setCell(0, 3, 3739);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createNewEmployee')
+data.setCell(1, 1, 'deleteEmployee')
 data.setCell(1, 2, 'fwkTests.EmployeeTests')
-data.setCell(1, 3, 2821);
+data.setCell(1, 3, 2763);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testSignInUser')
 data.setCell(2, 2, 'fwkTests.LoginTest')
-data.setCell(2, 3, 1493);
+data.setCell(2, 3, 1923);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deleteEmployee')
+data.setCell(3, 1, 'identifiyingEmployee')
 data.setCell(3, 2, 'fwkTests.EmployeeTests')
-data.setCell(3, 3, 13);
+data.setCell(3, 3, 1209);
 window.suiteTableData['Evercoding_Vacations']= { tableData: data, tableDiv: 'times-div-Evercoding_Vacations'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 59 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Evercoding_Vacations">
               </div> <!-- times-div-Evercoding_Vacations -->
             </div> <!-- times-div -->
@@ -399,48 +293,50 @@ return data;
                 <span class="method-name">initializeTestBaseSetup(http://vacations.evercoding.com/)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">6831 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">testSignInUser</span>
-                <span class="method-start">6849 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">8343 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">fwkTests.EmployeeTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initializeTestBaseSetup(http://vacations.evercoding.com/)</span>
-                <span class="method-start">8856 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fwkTests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">16533 ms</span>
+                <span class="method-start">8703 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createNewEmployee</span>
-                <span class="method-start">16535 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">deleteEmployee</span>
-                <span class="method-start">19357 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">indentifiyingEmployee</span>
-                <span class="method-start">19377 ms</span>
+                <span class="method-name">testSignInUser</span>
+                <span class="method-start">8714 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">78139 ms</span>
+                <span class="method-start">10638 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fwkTests.EmployeeTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">12836 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createNewEmployee</span>
+                <span class="method-start">12838 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">identifiyingEmployee</span>
+                <span class="method-start">16578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteEmployee</span>
+                <span class="method-start">17788 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">20552 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
