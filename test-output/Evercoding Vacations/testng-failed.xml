@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Evercoding Vacations]" parallel="classes">
-  <parameter name="language" value="en"/>
   <parameter name="appURL" value="http://vacations.evercoding.com/"/>
+  <parameter name="language" value="en"/>
   <test name="Login Test">
     <parameter name="appURL" value="http://vacations.evercoding.com/"/>
     <classes>
       <class name="fwkTests.LoginTest"/>
     </classes>
   </test> <!-- Login Test -->
+  <test name="Employee Tests">
+    <parameter name="appURL" value="http://vacations.evercoding.com/"/>
+    <classes>
+      <class name="fwkTests.EmployeeTests"/>
+    </classes>
+  </test> <!-- Employee Tests -->
+  <test name="Employee Tests(failed)" parallel="classes">
+    <parameter name="appURL" value="http://vacations.evercoding.com/"/>
+    <classes>
+      <class name="fwkTests.EmployeeTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="deleteEmployee"/>
+          <include name="initializeTestBaseSetup"/>
+        </methods>
+      </class> <!-- fwkTests.EmployeeTests -->
+      <class name="fwkTests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="initializeTestBaseSetup"/>
+        </methods>
+      </class> <!-- fwkTests.LoginTest -->
+    </classes>
+  </test> <!-- Employee Tests(failed) -->
 </suite> <!-- Failed suite [Evercoding Vacations] -->

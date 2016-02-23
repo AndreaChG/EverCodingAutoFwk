@@ -9,4 +9,10 @@
             <class name="fwkTests.LoginTest"/>
         </classes>
     </test>
+    <test name="Employee Tests">
+    	<parameter name="appURL" value="http://vacations.evercoding.com/"/>
+    	<classes>
+    		 <class name="fwkTests.EmployeeTests"/>
+    	</classes>
+    </test>
 </suite>

@@ -1,5 +1,8 @@
 package pagesObjects;
 
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +19,9 @@ public class EmployeesPage extends BasePage{
 	    private By startWorkingYearList = By.id("employee_start_working_on_1i");
 	    private By startWorkingMonthList = By.id("employee_start_working_on_2i");
 	    private By startWorkingDayList = By.id("employee_start_working_on_3i");
-	    private By createEmployeeButton = By.cssSelector("input[value='Create Employee']");
+	    private By createEmployeeButton = By.cssSelector("[value='Create Employee']");
 	    private By employeeCreationMsg = By.id("notice");
+	    private By backLinkButton = By.xpath(".//*[@id='content']/a[contains(text(),'Back')]");
 
 	    public EmployeesPage(WebDriver driver) {
 	        super(driver);
@@ -43,15 +47,45 @@ public class EmployeesPage extends BasePage{
 	    	this.selectStartWorkingYear(strStartWorkingYear);
 	    	this.selectStartWorkingMonth(strStartWorkingMonth);
 	    	this.selectStartWorkingDay(strStartWorkingDay);
+	    	this.clickOnCreateEmployeeButton();
 	    }
 	    
-	    public void clickOnCreateEmployee(){
-	    	System.out.println("Proceed to create new employee");
-	    	driver.findElement(createEmployeeButton).click();
+	    public void backToEmployeeInformation(){
+	    	driver.findElement(backLinkButton).click();
+	    }
+	    
+	    public void deleteEmployee(String strFirstName){
+	    	System.out.println("Proceed to delete employee...");
+	    	By deleteEmployeeButton = By.xpath(".//td[contains(text(),'"+strFirstName+"')]/following-sibling::td[last()]/a");
+	    	driver.findElement(deleteEmployeeButton).click();
+	    	System.out.println("Proceed to delete confirmation employee...");
+	    	Alert myAlert = driver.switchTo().alert();
+	    	myAlert.accept();
 	    }
 	    
 	    public String getEmployeeCreationMsg(){
 	    	return driver.findElement(employeeCreationMsg).getText();
+	    }
+	    
+	    public boolean getIfEmployeeNameExists(String strFirstName){
+	    	boolean elementExists;
+	    	try{
+	    		driver.findElement(By.xpath(".//td[contains(text(),'"+ strFirstName +"')]"));
+	    		elementExists = true;
+	    	} catch(NoSuchElementException e){
+	    		elementExists = false;
+	    	}
+			return elementExists;
+	    }
+	    
+	    public void goToCreateNewEmployee(){
+	    	System.out.println("Go to new employee creation link ");
+	    	driver.findElement(createNewEmployeeLink).click();
+	    }
+	    
+	    private void clickOnCreateEmployeeButton(){
+	    	System.out.println("Proceed to create new employee");
+	    	driver.findElement(createEmployeeButton).click();
 	    }
 	    
 	    private void fillFirstNameField(String strFirstName){
