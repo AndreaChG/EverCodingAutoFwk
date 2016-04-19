@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Evercoding Vacations]" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Evercoding Vacations]">
   <parameter name="appURL" value="http://vacations.evercoding.com/"/>
   <parameter name="language" value="en"/>
   <test name="Login Test">
